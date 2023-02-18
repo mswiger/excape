@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.files                 = ["lib/excape.rb"]
   s.homepage              = "https://rubygems.org/gems/excape"
   s.license               = "MIT"
-  s.required_ruby_version = "3.0"
+  s.required_ruby_version = ">= 3.0"
 
   s.executables << "excape"
 end
