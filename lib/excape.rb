@@ -8,7 +8,7 @@ class Excape
 
   def initialize
     command_list = COMMANDS.keys.join("\n")
-    selected = `echo "#{command_list}" | wofi --show dmenu`.strip!
+    selected = `echo "#{command_list}" | wofi --dmenu --prompt "Select Action"`.strip!
     return unless selected
 
     selected_command = COMMANDS[selected.to_sym]
