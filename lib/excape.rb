@@ -1,7 +1,7 @@
 class Excape
   COMMANDS = {
     "Logout": "swaymsg exit",
-    "Reboot": "systemctl restart",
+    "Reboot": "systemctl reboot",
     "Reboot Into Windows": "systemctl reboot --boot-loader-entry=auto-windows",
     "Shutdown": "systemctl poweroff",
   }.freeze
