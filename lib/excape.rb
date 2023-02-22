@@ -1,3 +1,5 @@
+require "English"
+
 class Excape
   COMMANDS = {
     "Logout": "swaymsg exit",
@@ -12,8 +14,8 @@ class Excape
     return unless selected
 
     selected_command = COMMANDS[selected.to_sym]
-    msg = "You selected \"#{selected}.\" Are you sure?"
-    button = "Yes, I am sure"
-    `swaynag -t warning -m '#{msg}' -b '#{button}' '#{selected_command}'`
+    msg = %(You selected "#{selected}." Are you sure?)
+    `zenity --question --text '#{msg}'`
+    `#{selected_command}` if $CHILD_STATUS.exitstatus.zero?
   end
 end

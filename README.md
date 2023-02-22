@@ -7,6 +7,7 @@ Simple Wofi wrapper for showing a system exit/shutdown menu in Sway.
 * Sway
 * Ruby
 * Wofi
+* Zenity
 
 ## Usage
 ```
